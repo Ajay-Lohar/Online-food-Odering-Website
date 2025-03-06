@@ -11,11 +11,11 @@ export const darkTheme = createTheme ({
             contrastText: "#000"
         },
         black:{
-            main: "#242B2E"
+            main: "#0d0d0d"
         },
         background: {
             main: "#fff",
-            default: "#121212",
+            default: "#0d0d0d",
             paper: "#333333"
         },
         textColor: {
