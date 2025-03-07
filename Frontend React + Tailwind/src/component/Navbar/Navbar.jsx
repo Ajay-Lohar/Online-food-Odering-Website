@@ -3,14 +3,15 @@ import "./navbar.css"
 import { Avatar, Badge, IconButton } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import logo from '/src/assets/restaurantlogo.png'
 
 const Navbar = () => {
   return (
     <div className='px-5 z-50 py-[.8rem] bg-[#e91e63] lg:px-20  flex justify-between'>
         
             <div className='lg:mr-10 cursor-pointer flex items-center space-x-4'>
-
-                <li className='logo font-semibold text-gray-300 text-2xl '>Zosh Food</li>
+            <img className='h-[3rem]' src={logo} alt="" />
+                <li className='logo font-semibold text-gray-300 text-2xl '>Fire Food</li>
 
         </div>
         <div className='flex items-center  space-x-2 lg:space-x-10'>
