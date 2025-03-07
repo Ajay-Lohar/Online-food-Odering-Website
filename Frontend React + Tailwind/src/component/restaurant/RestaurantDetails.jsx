@@ -5,6 +5,7 @@ import Radio from '@mui/material/Radio';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 
 import FormControlLabel from '@mui/material/FormControlLabel';
+import MenuCard from './MenuCard';
 
 
 
@@ -25,6 +26,9 @@ const foodTypes = [
     {label: "Dairy-Free", value: "Dairy-Free"},
     
 ]
+
+const menu =[2,4,2,1]
+
 const RestaurantDetails = () => {
     const [foodType,setFoodType] = useState("all")
     const handleFilter =(e)=> {
@@ -81,9 +85,9 @@ const RestaurantDetails = () => {
         <Divider/>
         <section className='pt-[2rem] lg:flex relative '>
 
-            <div className='space-y-10 lg:w-[20%]  filter'>
+            <div className='space-y-10 lg:w-[20%]  filter p-5  '>
 
-                <div className='box space-y-5  lg:sticky top-28 '>
+                <div className='box space-y-5  lg:sticky top-28 shadow-md'>
                     <div>   
                         <Typography variant='h5' sx={{paddingBottom:"1rem"}}>
                             Food Type
@@ -127,17 +131,13 @@ const RestaurantDetails = () => {
                         </FormControl>
                         
                     </div>
-                    
-                    
-                    
-                    
-                        
+                     
                 </div>                
 
             </div>
             <div className='space-y-5 lg:w-[80%]  lg:pl-10'>
-            menu
-
+                {menu.map((item)=><MenuCard />)}
+ 
             </div>
 
         </section>
