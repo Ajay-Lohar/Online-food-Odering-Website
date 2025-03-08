@@ -30,12 +30,12 @@ const CartItem = () => {
                     </div>
 
                 </div>
-                <p>₹ 1955</p>
+                <p>₹1955</p>
             </div>
         </div>
         <div className='pt-3 space-x-2 '>
             {[1,324,32,0].map((item)=>
-                <Chip label={"bread" }/>
+                <Chip key={item} label={"bread" }/>
             )}
 
         </div>
