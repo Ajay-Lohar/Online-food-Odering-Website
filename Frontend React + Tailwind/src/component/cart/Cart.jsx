@@ -23,12 +23,7 @@ const style = {
     p: 4,
   };
 
-  const initialValues   = { 
-    StreetAddress:"",
-    State:"",
-    City:"",
-    Pincode:"",
-  }
+ 
 
   const validationSchema = Yup.object().shape({
     StreetAddress: Yup.string().required("Street Address is required"),
@@ -45,9 +40,16 @@ const createOrderUsingSelectAddress=() =>{
 }
 
 const Cart = () => {
+    const initialValues = { 
+        streetAddress:"",
+        state:"",
+        city:"",
+        pincode:"",
+      }
+      
 const handleOpenAddresModel=() =>{setOpen(true)};
 
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = useState(false);
     const handleClose = () => setOpen(false);
 
     const handleSubmit = (values) =>{
@@ -122,10 +124,9 @@ const handleOpenAddresModel=() =>{setOpen(true)};
             >
             <Box sx={style}>
                 <Formik initialValues={initialValues}
-                onSubmit={handleSubmit}
+               
                 validationSchema={validationSchema}>
-
-                <Form>
+                <Form  onSubmit={handleSubmit}>
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <Field as={TextField}
@@ -133,12 +134,7 @@ const handleOpenAddresModel=() =>{setOpen(true)};
                             label="Street Address"
                             fullWidth
                             variant="outlined"
-                            // error={!ErrorMessage("StreetAddress ")}
-                            // helperText={
-                            //     <ErrorMessage>
-                            //         {(msg)=><span className='text-red-600'>{msg}</span>}
-                            //     </ErrorMessage>
-                            // }
+                           
                             >
 
                             </Field>
@@ -150,12 +146,7 @@ const handleOpenAddresModel=() =>{setOpen(true)};
                             label="City"
                             fullWidth
                             variant="outlined"
-                            // error={!ErrorMessage("StreetAddress ")}
-                            // helperText={
-                            //     <ErrorMessage>
-                            //         {(msg)=><span className='text-red-600'>{msg}</span>}
-                            //     </ErrorMessage>
-                            // }
+                         
                             >
 
                             </Field>
@@ -167,14 +158,8 @@ const handleOpenAddresModel=() =>{setOpen(true)};
                             label="State"
                             fullWidth
                             variant="outlined"
-                            // error={!ErrorMessage("StreetAddress ")}
-                            // helperText={
-                            //     <ErrorMessage>
-                            //         {(msg)=><span className='text-red-600'>{msg}</span>}
-                            //     </ErrorMessage>
-                            // }
+                           
                             >
-
                             </Field>
 
                         </Grid>
@@ -185,12 +170,7 @@ const handleOpenAddresModel=() =>{setOpen(true)};
                             label="Pincode"
                             fullWidth
                             variant="outlined"
-                            // error={!ErrorMessage("StreetAddress ")}
-                            // helperText={
-                            //     <ErrorMessage>
-                            //         {(msg)=><span className='text-red-600'>{msg}</span>}
-                            //     </ErrorMessage>
-                            // }
+                           
                             >
 
                             </Field>
@@ -201,8 +181,6 @@ const handleOpenAddresModel=() =>{setOpen(true)};
                                 Add
                             </Button>
                         </Grid>
-    
-
                     </Grid>
                 </Form>
                 </Formik>
