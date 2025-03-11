@@ -20,6 +20,7 @@ function App() {
       {/* <Cart/> */}
       {/* <Profile/> */}
       <CustomerRoute/>
+
     
     </h1>
     </ThemeProvider> 

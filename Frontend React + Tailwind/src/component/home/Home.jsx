@@ -2,6 +2,7 @@ import React from 'react'
 import "./home.css"
 import MultiItemCaurasel from './MultiItemCaurasel'
 import RestaurantCard from '../restaurant/RestaurantCard'
+import Auth from '../Auth/Auth'
 
 
 const restaurant =[1,1,2,3,4,6,4,8]
