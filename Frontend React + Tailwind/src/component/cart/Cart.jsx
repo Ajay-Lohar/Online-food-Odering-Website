@@ -18,44 +18,43 @@ const style = {
     transform: 'translate(-50%, -50%)',
     width: 400,
     bgcolor: 'background.paper',
-    outlie:"none", 
+    outline:"none", 
     boxShadow: 24,
     p: 4,
   };
 
+  const initialValues = { 
+    streetAddress:"",
+    state:"",
+    city:"",
+    pincode:"",
+  }
  
 
   const validationSchema = Yup.object().shape({
-    StreetAddress: Yup.string().required("Street Address is required"),
-    State: Yup.string().required("State is required"),
-    City: Yup.string().required("City is required"),
-    Pincode: Yup.string().required("Pincode is required").matches(/^[1-9][0-9]{5}$/, "Pincode must be 6 digits"),
+    streetAddress: Yup.string().required("Street Address is required"),
+    state: Yup.string().required("State is required"),
+    city: Yup.string().required("City is required"),
+    pincode: Yup.string().required("Pincode is required").matches(/^[1-9][0-9]{5}$/, "Pincode must be 6 digits"),
   });
 
 
 
-const items = [1,5]
-const createOrderUsingSelectAddress=() =>{
 
-}
+const items = [1,1]
 
 const Cart = () => {
-    const initialValues = { 
-        streetAddress:"",
-        state:"",
-        city:"",
-        pincode:"",
-      }
-      
-const handleOpenAddresModel=() =>{setOpen(true)};
+    const createOrderUsingSelectAddress=() =>{ }
+    const handleOpenAddresModel=() =>{setOpen(true)};
 
     const [open, setOpen] = useState(false);
     const handleClose = () => setOpen(false);
 
     const handleSubmit = (values) =>{
         console.log("value", values);
-        
-    }
+      }
+
+   
   return (
     <>
         <main className='lg:flex justify-between '>
@@ -125,8 +124,9 @@ const handleOpenAddresModel=() =>{setOpen(true)};
             <Box sx={style}>
                 <Formik initialValues={initialValues}
                
-                validationSchema={validationSchema}>
-                <Form  onSubmit={handleSubmit}>
+                validationSchema={validationSchema}
+                onSubmit={handleSubmit}>
+                <Form  >
                     <Grid container spacing={2}>
                         <Grid item xs={12}>
                             <Field as={TextField}

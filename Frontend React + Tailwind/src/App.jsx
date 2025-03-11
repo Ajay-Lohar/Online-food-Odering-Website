@@ -5,6 +5,8 @@ import { darkTheme } from './theme/DarkTheme'
 import Home from './component/home/Home'
 import RestaurantDetails from './component/restaurant/RestaurantDetails'
 import Cart from './component/cart/Cart'
+import Profile from './component/profile/Profile'
+import CustomerRoute from './Routers/CustomerRoute'
 
 function App() {
 
@@ -12,10 +14,13 @@ function App() {
     <ThemeProvider theme={darkTheme}>
     <h1>
       <CssBaseline/>
-      <Navbar/>
+      {/* <Navbar/> */}
       {/* <Home/> */}
       {/* <RestaurantDetails/> */}
-      <Cart/>
+      {/* <Cart/> */}
+      {/* <Profile/> */}
+      <CustomerRoute/>
+    
     </h1>
     </ThemeProvider> 
   )

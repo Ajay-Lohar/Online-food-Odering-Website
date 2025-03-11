@@ -1,17 +1,17 @@
 import React from 'react'
 import "./navbar.css"
-import { Avatar, Badge, IconButton } from '@mui/material';
+import { Avatar, Badge, Box, IconButton } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import logo from '/src/assets/restaurantlogo.png'
 
 const Navbar = () => {
   return (
-    <div className='px-5 z-50 py-[.8rem] bg-[#e43746] lg:px-20  flex justify-between'>
+    <Box className='px-5 sticky top-0 z-50 py-[0.8rem] bg-[#e43746] lg:px-20  flex justify-between'>
         
             <div className='lg:mr-10 cursor-pointer flex items-center space-x-4'>
             <img className='h-[3rem]' src={logo} alt="" />
-                <li className='logo font-semibold text-amber-50 text-2xl '>Fire Food</li>
+                <li className='logo font-semibold text-amber-50 text-2xl '>Indian Oven</li>
 
         </div>
         <div className='flex items-center  space-x-2 lg:space-x-10'>
@@ -33,7 +33,7 @@ const Navbar = () => {
             </div>
 
         </div>
-    </div>
+    </Box>
   )
 }
 
