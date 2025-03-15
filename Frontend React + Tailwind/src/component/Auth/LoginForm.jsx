@@ -4,6 +4,7 @@ const LoginForm = () => {
   return (
     <div>
       <h1>LoginForm</h1>
+      <h1>LoginForm</h1>
     </div>
   )
 }
