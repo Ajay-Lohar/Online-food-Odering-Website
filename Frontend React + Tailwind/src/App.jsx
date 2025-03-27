@@ -19,7 +19,7 @@ function App() {
       {/* <RestaurantDetails/> */}
       {/* <Cart/> */}
       {/* <Profile/> */}
-      <CustomerRoute/>
+      <CustomerRoute/> {/* Page routes */}
 
     
     </h1>
