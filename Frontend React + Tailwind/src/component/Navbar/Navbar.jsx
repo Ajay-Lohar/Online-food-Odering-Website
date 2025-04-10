@@ -5,8 +5,10 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import logo from '/src/assets/restaurantlogo.png'
 import { Person } from '@mui/icons-material';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
+  const navigate = useNavigate();
   
   return (
     <Box className='px-5 sticky top-0 z-50 py-[0.8rem] bg-[#e43746] lg:px-20  flex justify-between'>
@@ -24,8 +26,8 @@ const Navbar = () => {
                 </IconButton>
             </div>
             <div className=''>
-                {true?<Avatar sx={{bgcolor:"white", color:"red"}}>A</Avatar>:
-                <IconButton>
+                {false? <Avatar sx={{bgcolor:"white", color:"red"}}>A</Avatar>:
+                <IconButton onClick ={()=>navigate("/account/login")}>
                   <Person/> 
                   </IconButton>}
             </div>
