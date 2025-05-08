@@ -2,6 +2,7 @@ import { Button, FormControl, InputLabel, MenuItem, Select, TextField, Typograph
 import { Field, Form, Formik } from 'formik'
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import VisibilityIcon from '@mui/icons-material/Visibility';  
 
 const initialValues={
   fullName:"",
@@ -46,9 +47,11 @@ const RegisterForm = () => {
                   fullWidth
                   variant="outlined"
                   margin= "normal"
+                  type="password"
                   >
           
             </Field>
+
             <FormControl fullWidth margin= "normal">
                   <InputLabel id="role-simple-select-label">Role</InputLabel>
                   <Field
